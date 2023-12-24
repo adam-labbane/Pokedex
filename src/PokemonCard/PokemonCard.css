@@ -1,0 +1,14 @@
+.PokemonCard {
+    position: relative;
+    background-color: white;
+    width: 400px;
+    height: 250px;
+    border: 2px solid;
+    margin: 20px;
+}
+
+.num{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
