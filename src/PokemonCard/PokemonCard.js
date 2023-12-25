@@ -15,7 +15,6 @@ export default function PokemonCard({id, name, image, types, langue}) {
         {types.map((type) => {
           return (<Type typeName={type} langue={langue}></Type>)
         })}
-        
       </div>
     );
   }

@@ -1,16 +1,27 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./PokemonDetailCard.css"
 import Type from "../Type/Type";
 import Button from '@mui/material/Button';
-import Typography from '@mui/material/Typography';
+import Dialog from "@mui/material/Dialog";
+import DialogTitle from "@mui/material/DialogTitle";
+import DialogContent from "@mui/material/DialogContent";
+import DialogActions from "@mui/material/DialogActions";
 
-export default function PokemonDetailCard({name, image, types, langue, taille, poids}) {
-
-    function moves(){
-        alert("test")
-    }
+export default function PokemonDetailCard({name, image, types, langue, taille, poids, moves}) {
     taille = taille / 10 + "m"
     poids = poids / 10 + "kg"
+
+    const [openDialog, setOpenDialog] = useState(false);
+
+    const handleMovesButtonClick = () => {
+      setOpenDialog(true);
+    };
+
+    const handleCloseDialog = () => {
+      setOpenDialog(false);
+    };
+
+
       return (
         <div className="PokemonDetailCard">
             <span className="name">{name}</span>
@@ -20,21 +31,18 @@ export default function PokemonDetailCard({name, image, types, langue, taille, p
             {types.map((type) => {
                 return (<Type typeName={type} langue={langue}></Type>)
                 })}
-            <Button variant="outlined" color="error" onClick={moves}>
-              Moves
-            </Button>
-            <Typography variant="subtitle1" component="div">
-              Selected: {selectedValue}
-            </Typography>
-            <br />
-            <Button variant="outlined" color="error" onClick={moves}>
-              Moves
-            </Button>
-            <SimpleDialog
-            selectedValue={selectedValue}
-            open={open}
-            onClose={handleClose}
-            />
-        </div>
-      );
-    }
+            <Button variant="outlined" color="error" onClick={handleMovesButtonClick} >Moves</Button>
+            <Dialog open={openDialog} onClose={handleCloseDialog}>
+              <DialogTitle>Pokemon Moves</DialogTitle>
+              <DialogContent sx={{ maxWidth: 'xl' }}>
+                {moves.map((move, index) => (
+                <div key={index}>{move}</div>
+                ))}
+                </DialogContent>
+                <DialogActions>
+                  <Button onClick={handleCloseDialog}>Cancel</Button>
+                  </DialogActions>
+                  </Dialog>
+                  </div>
+                  );
+                }

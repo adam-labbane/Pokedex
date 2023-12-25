@@ -7,8 +7,16 @@
     margin: 20px;
 }
 
-.num{
-    position: absolute;
-    top: 0;
-    left: 0;
-}
+.Dialog-container {
+    /* Styles spécifiques pour le Dialog dans PokemonDetailCard */
+    text-align: center;
+    background-color: #292c33;
+  }
+  
+  .Dialog-content {
+    /* Styles spécifiques pour le contenu du Dialog dans PokemonDetailCard */
+    color: white;
+    /* Ajoutez d'autres styles si nécessaire */
+  }
+
+
