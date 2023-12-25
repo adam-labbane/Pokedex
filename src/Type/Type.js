@@ -8,8 +8,8 @@ export default function Type({typeName, langue}) {
     const lang = data.translations[langue]
 
     return (
-      <div className="Type">
-        <span style={{backgroundColor:colorz}}>{lang}</span>
+      <div className="Type" style={{backgroundColor: colorz}}>
+        <span>{lang}</span>
       </div>
     );
   }

@@ -1,8 +1,5 @@
 .PokemonList {
-    background-color:#292c33;
-    text-align: center;
     display: flex;
-    align-items: center;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-evenly;
 }

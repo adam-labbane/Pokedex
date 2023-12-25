@@ -1,0 +1,12 @@
+.Type {
+    color: white;
+    padding: 8px 12px; 
+    margin: 5px;
+    border-radius: 20px; 
+    display: inline-block;
+    font-weight: bold; 
+    text-transform: capitalize; 
+    font-size: 14px; 
+    letter-spacing: 1px; 
+    text-align: center; 
+}

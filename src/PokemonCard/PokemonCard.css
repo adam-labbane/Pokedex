@@ -1,14 +1,42 @@
 .PokemonCard {
     position: relative;
-    background-color: white;
-    width: 400px;
-    height: 250px;
-    border: 2px solid;
-    margin: 20px;
+    background-color: #f5f5f5;
+    width: 200px; /* Ajustez la largeur selon votre besoin */
+    height: 200px; /* Ajustez la hauteur selon votre besoin */
+    border: 2px solid #e0e0e0;
+    margin: 10px; /* Ajustez la marge selon votre besoin */
+    overflow: hidden;
+    transition: transform 0.2s ease-in-out;
+    border-radius: 15px;
 }
 
-.num{
-    position: absolute;
-    top: 0;
-    left: 0;
+.PokemonCard:hover {
+    transform: scale(1.05);
 }
+
+.num {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 12px;
+    font-weight: bold;
+    color: #333; /* Couleur du numéro */
+}
+
+
+.custom-name {
+    flex-grow: 1;
+    padding: 20px 10px;
+    text-decoration: none;
+    color: #333;
+    display: block;
+    font-size: 16px;
+    font-weight: bold;
+}
+img {
+    width: 50%;
+    display: block;
+    margin: auto;
+    border-radius: 15px 15px 0 0;
+}
+
