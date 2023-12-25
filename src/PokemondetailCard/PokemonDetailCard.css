@@ -1,22 +1,48 @@
 .PokemonDetailCard {
-    position: relative;
-    background-color: white;
-    width: 400px;
-    height: 250px;
-    border: 2px solid;
-    margin: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  background-color: #f5f5f5;
+  width: 800px;  
+  height: 500px;
+  border: 2px solid #e0e0e0;
+  overflow: hidden;
+
 }
 
-.Dialog-container {
-    /* Styles spécifiques pour le Dialog dans PokemonDetailCard */
-    text-align: center;
-    background-color: #292c33;
-  }
+
+
+.custome-name {
+  font-size: 100px;
   
-  .Dialog-content {
-    /* Styles spécifiques pour le contenu du Dialog dans PokemonDetailCard */
-    color: white;
-    /* Ajoutez d'autres styles si nécessaire */
-  }
+}
+
+.info {
+  display: flex;
+  justify-content: space-between; 
+  width: 100%; 
+  padding: 0 10px; 
+}
+
+.taille, .poids {
+  font-weight: bold; 
+  
+}
+
+.pokemon-image {
+  width: 30%; 
+
+
+}
+
+.moves-button {
+  margin-top: 10px;
+}
+
+.types {
+  display: flex;
+  margin-top: 10px; 
+}
 
 

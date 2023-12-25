@@ -24,17 +24,23 @@ export default function PokemonDetailCard({name, image, types, langue, taille, p
 
       return (
         <div className="PokemonDetailCard">
-            <span className="name">{name}</span>
-            <img src={image}/>
-            <span className="taille">{taille}</span>
-            <span className="poids">{poids}</span>
+            <span className="name custome-name">{name}</span>
+            <img src={image} alt={name} className="pokemon-image" />
+            <div className="info-container">
+              <div className="info">
+                <span className="taille">{taille}</span>
+                <span className="poids">{poids}</span>
+              </div>
+            </div>
+            <div className="types">
             {types.map((type) => {
                 return (<Type typeName={type} langue={langue}></Type>)
                 })}
-            <Button variant="outlined" color="error" onClick={handleMovesButtonClick} >Moves</Button>
+            </div>
+            <Button variant="outlined" color="error" onClick={handleMovesButtonClick} className="moves-button" >Moves</Button>
             <Dialog open={openDialog} onClose={handleCloseDialog}>
               <DialogTitle>Pokemon Moves</DialogTitle>
-              <DialogContent sx={{ maxWidth: 'xl' }}>
+              <DialogContent >
                 {moves.map((move, index) => (
                 <div key={index}>{move}</div>
                 ))}

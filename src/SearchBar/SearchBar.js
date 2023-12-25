@@ -10,16 +10,17 @@ export default function SearchBar({text, setText}) {
   }
 
   return (
-
-        <TextField
+    <div className="SearchBar">
+      <TextField
         color="primary"
-        sx={{backgroundColor:"#292c33"}}
-          id="outlined-basic"
-          variant="outlined"
-          value={text}
-          onChange={onChange}
-          fullWidth 
-          label="Enter a pokemon name"
-        />
+        sx={{ backgroundColor: "#292c33" }}
+        id="outlined-basic"
+        variant="outlined"
+        value={text}
+        onChange={onChange}
+        fullWidth
+        label="Enter a pokemon name"
+    />
+    </div>
   );
 }

@@ -8,8 +8,8 @@ export default function Type({typeName, langue}) {
     const lang = data.translations[langue]
 
     return (
-      <div className="Type" style={{backgroundColor: colorz}}>
-        <span>{lang}</span>
+      <div className="Type" style={{backgroundColor: colorz, border: `1px solid black`}}>
+        <span>{lang.toUpperCase()}</span>
       </div>
     );
   }

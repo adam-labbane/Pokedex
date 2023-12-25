@@ -10,7 +10,7 @@ import {
 export function AppWrapper({langue, setLang})
 {
   return (
-    <div className="wrapp">
+    <div>
       <Header langue={langue} setLang={setLang}></Header>
       <Outlet></Outlet>
     </div>
